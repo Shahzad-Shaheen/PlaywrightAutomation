@@ -1,21 +1,23 @@
 {
-  "name": "playwrightautomation",
-  "version": "1.0.0",
-  "description": "Sample Testing Framework Playwright",
-  "main": "index.js",
-  "scripts": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Shahzad-Shaheen/PlaywrightAutomation.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Shahzad-Shaheen/PlaywrightAutomation/issues"
-  },
-  "homepage": "https://github.com/Shahzad-Shaheen/PlaywrightAutomation#readme",
-  "devDependencies": {
-    "@playwright/test": "^1.32.1"
-  }
+    "name": "playwrightautomation",
+    "version": "1.0.0",
+    "description": "Sample Testing Framework Playwright",
+    "main": "index.js",
+    "scripts": {},
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Shahzad-Shaheen/PlaywrightAutomation.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Shahzad-Shaheen/PlaywrightAutomation/issues"
+    },
+    "homepage": "https://github.com/Shahzad-Shaheen/PlaywrightAutomation#readme",
+    "devDependencies": {
+        "@playwright/test": "^1.32.1",
+        "dotenv": "^16.0.3",
+        "@faker-js/faker": "^7.4.0"
+    }
 }
