@@ -31,12 +31,10 @@ export class MyLocations {
     await this.addLocationBtn.click();
     await this.address.click();
     await this.address.fill(address);
-    await resolveAfterSeconds(2000);
     await this.page.locator('[class^=LocationForm_addressList__] > li:nth-child(1)').click();
     await this.phoneNumber.click();
     await this.phoneNumber.fill(phoneNumber);
     await this.btnSaveLocation.click();
-    await resolveAfterSeconds(3000);
   }
 
   async editLocation(editedAddress: string): Promise<void> {
@@ -44,27 +42,21 @@ export class MyLocations {
     await this.address.dblclick();
     await this.address.press('ArrowRight');
     await this.address.fill(editedAddress);
-    await resolveAfterSeconds(2000);
     await this.page.locator('[class^=LocationForm_addressList__] > li:nth-child(1)').click();
-    await resolveAfterSeconds(2000);
     await this.btnSaveLocation.click();
-    await resolveAfterSeconds(3000);
   }
 
   async deleteFirstAddedLocation(locationName: string): Promise<void> {
     let row = this.page.locator('//td[contains(text(), "' + locationName + '")]/ancestor::tr');
     await row.locator('td:nth-child(3) > div > svg:nth-child(2)').click();
-    await resolveAfterSeconds(3000);
   }
 
   async clickEditLocationIcon(locationName: string): Promise<void> {
     let row = this.page.locator('//td[contains(text(), "' + locationName + '")]/ancestor::tr').first();
     await row.locator('td:nth-child(3) > div > svg:nth-child(1)').click();
-    await resolveAfterSeconds(3000);
   }
 
   async clickSave(): Promise<void> {
-    await resolveAfterSeconds(2000);
     await this.btnSave.isVisible();
     await this.btnSave.click();
   }

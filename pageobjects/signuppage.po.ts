@@ -66,9 +66,7 @@ export class SignupPage {
     for (let i = 0; i < categoryList.length; i++) {
       await this.page.locator('text=' + categoryList[i] + '').click();
     }
-    await resolveAfterSeconds(2);
     await this.page.locator('div[role="presentation"] div').first().click();
-    //await this.page.locator(".becomesteps_activityValueBox__22Cek").nth(1).click({ force: true });
   }
 
   async selectAllSeasons(): Promise<void> {
@@ -95,10 +93,7 @@ export class SignupPage {
   }
 
   async clickNextOnActivityDetailsSecondSection(): Promise<void> {
-    await resolveAfterSeconds(5000);
     await this.page.getByRole('button', { name: 'Next' }).click();
-    //await this.page.locator('text=Tell us about your activityActivity TitleSelect a category for your activityAmus >> button')
-    // .click({ force: true });
 
   }
 
@@ -182,7 +177,6 @@ export class SignupPage {
   }
 
   async enterActivityTitle(activity: string): Promise<void> {
-    await resolveAfterSeconds(2000);
     await this.txtBxActivity.click();
     await this.txtBxActivity.fill(activity);
   }

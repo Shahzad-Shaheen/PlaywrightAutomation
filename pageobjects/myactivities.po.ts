@@ -122,13 +122,10 @@ export class MyActivities {
   }
 
   async saveActivityDetails(): Promise<void> {
-    resolveAfterSeconds(4000);
     await this.btnSaveActivity.isVisible();
     await this.btnSaveActivity.click();
     await this.page.waitForLoadState();
-    resolveAfterSeconds(4000);
     await this.page.reload();
-    resolveAfterSeconds(4000);
   }
 
   async enterPrice(priceTitle: string, priceDescription: string, priceValue: string): Promise<void> {
@@ -141,29 +138,23 @@ export class MyActivities {
     await this.priceValueTxtBx.fill(priceValue);
     await this.priceValueTxtBx.click();
     await this.page.locator('[aria-label="Save"]').click();
-    resolveAfterSeconds(4000);
   }
 
   async deletePrice(): Promise<void> {
     await this.page.locator('[aria-label="Delete"]').click();
-    resolveAfterSeconds(2000);
     await this.page.locator('[aria-label="Save"]').click();
-    resolveAfterSeconds(2000);
     await this.page.locator('text=No price yet for this activity').click();
   }
 
 
   async deleteAnActivity(): Promise<void> {
     await this.page.reload();
-    resolveAfterSeconds(2000);
     await this.page.locator('[class^=CreatePartnerProfile_actionButton__] > svg:nth-child(2)').first().waitFor();
     let size = await this.page.locator('[class^=CreatePartnerProfile_actionButton__] > svg:nth-child(2)').count();
     console.log("Activity present: " + size);
     if (size > 2) {
       await this.page.locator('[class^=CreatePartnerProfile_actionButton__] > svg:nth-child(2)').first().click();
-      resolveAfterSeconds(2000);
       await this.page.reload();
-      resolveAfterSeconds(2000);
     }
   }
 

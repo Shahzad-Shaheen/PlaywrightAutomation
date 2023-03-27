@@ -41,7 +41,7 @@ export default class GmailHelper {
     );
     if (email) {
       const html = email[0].body.html.toString();
-      return html.substring(html.indexOf('https://partner-dev.kidadvisor.ca/email-confirmed/'), html.indexOf('" target="_blank" style="text-decoration:none; color:#ffffff; line-height:42px; display:block;">CONFIRM EMAIL'));
+      return html.substring(html.indexOf('https://qatestautomation/email-confirmed/'), html.indexOf('" target="_blank" style="text-decoration:none; color:#ffffff; line-height:42px; display:block;">CONFIRM EMAIL'));
     } else {
       console.log("Email was not found!");
     }

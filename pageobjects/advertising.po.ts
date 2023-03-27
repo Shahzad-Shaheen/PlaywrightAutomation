@@ -60,17 +60,17 @@ export class MyAdvertising {
 
   async clickOneMonthAdDisplay(page: Page): Promise<void> {
     await page.locator('a:has-text("1 month of ad display")').click();
-    await expect(page).toHaveURL('https://shop.kidadvisor.ca/products/1-month-of-ad-display');
+    await expect(page).toHaveURL('https://qatestautomation/products/1-month-of-ad-display');
   }
 
   async click14DaysAdDisplay(page: Page): Promise<void> {
     await page.locator('a:has-text("14 days of ad display")').click();
-    await expect(page).toHaveURL('https://shop.kidadvisor.ca/products/14-days-of-ad-display');
+    await expect(page).toHaveURL('https://qatestautomation/products/14-days-of-ad-display');
   }
 
   async click7DaysAdDisplay(page: Page): Promise<void> {
     await page.locator('a:has-text("7 days of ad display")').click();
-    await expect(page).toHaveURL('https://shop.kidadvisor.ca/products/7-days-of-ad-display');
+    await expect(page).toHaveURL('https://qatestautomation/products/7-days-of-ad-display');
   }
 
   async clickCheckout(page: Page): Promise<void> {
@@ -80,7 +80,7 @@ export class MyAdvertising {
   async clickAddToCart(page: Page): Promise<void> {
     await page.locator("div.product-form__controls-group.product-form__controls-group--submit > div > button").click();
     await page.locator("xpath=//a[@href='/cart']").first().click();
-    await expect(page).toHaveURL('https://shop.kidadvisor.ca/cart');
+    await expect(page).toHaveURL('https://qatestautomation/cart');
   }
 
   async verifyProduct14Days(page: Page): Promise<void> {
